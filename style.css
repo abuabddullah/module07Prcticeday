@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Crete+Round&family=Nova+Round&display=swap');
+
+body {
+    font-family: 'Crete Round', serif;
+    /* font-family: 'Nova Round', cursive; */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td,
+th {
+    border: 1px solid red;
+    padding: 10px;
+}
+
+h3.typeEffect {
+    font-size: 30px;
+    font-weight: 700;
+    color: rgb(71, 248, 139);
+    width: 36%;
+    border-right: 10px solid rgb(71, 248, 139);
+    text-transform: capitalize;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 10px 0;
+}
+
+@keyframes typerEffect {
+    0% {
+        width: 0;
+    }
+
+    100% {}
+}
+
+.typeEffect {
+    animation: typerEffect 3s steps(33) 0s infinite alternate;
+
+}
+
+section {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wraper {
+    display: flex;
+    align-items: baseline;
+}
+
+.wraper .staticText {
+    font-size: 50px;
+    white-space: nowrap;
+}
+
+.wraper ul.dynamicText {
+    margin: 0 20px;
+    color: indianred;
+    font-size: 50px;
+    font-weight: 900;
+    /* border: 1px solid #000; */
+    border-right: 8px solid indianred;
+    height: 64px;
+    position: relative;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typeEffect 4s steps(12) 0s infinite alternate-reverse;
+}
+
+@keyframes typeEffect {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
+}
+
+.wraper ul.dynamicText {}
+
+.wraper ul.dynamicText li {
+    list-style: none;
+    position: relative;
+    top: 0%;
+    top: -210%;
+    animation: slidingUp 16s steps(1) 0s infinite reverse;
+}
+
+@keyframes slidingUp {
+    
+
+    25% {
+        top: 0%;
+    }
+    50% {
+        top: -105%;
+    }
+
+    100% {
+        top: -210%;
+    }
+
+}
+
+.wraper ul.dynamicText li span {}
+
+.wraper .staticText2 {}
+
+.wraper .staticText2 span {}
